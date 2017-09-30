@@ -8,18 +8,16 @@ namespace Demo.Abstract
 
         public Right(TRight value)
         {
-            this.Value = value;
+            Value = value;
         }
 
-        public override Either<TNewLeft, TRight> MapLeft<TNewLeft>(
-            Func<TLeft, TNewLeft> mapping) =>
-            new Right<TNewLeft, TRight>(this.Value);
+        public override Either<TNewLeft, TRight> MapLeft<TNewLeft>(Func<TLeft, TNewLeft> mapping)
+            => new Right<TNewLeft, TRight>(Value);
 
-        public override Either<TLeft, TNewRight> MapRight<TNewRight>(
-            Func<TRight, TNewRight> mapping) =>
-            new Right<TLeft, TNewRight>(mapping(this.Value));
+        public override Either<TLeft, TNewRight> MapRight<TNewRight>(Func<TRight, TNewRight> mapping)
+            => new Right<TLeft, TNewRight>(mapping(Value));
 
-        public override TLeft Reduce(Func<TRight, TLeft> mapping) =>
-            mapping(this.Value);
+        public override TLeft Reduce(Func<TRight, TLeft> mapping)
+            => mapping(Value);
     }
 }
