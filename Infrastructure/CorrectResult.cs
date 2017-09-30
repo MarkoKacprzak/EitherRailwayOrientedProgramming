@@ -1,4 +1,5 @@
 ﻿using Demo.Abstract;
+using Demo.Types;
 
 namespace Demo.Infratructure
 {

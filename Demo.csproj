@@ -44,17 +44,21 @@
   <ItemGroup>
     <Compile Include="Infrastructure\CorrectResult.cs" />
     <Compile Include="Abstract\Either.cs" />
-    <Compile Include="Infrastructure\Failed.cs" />
+    <Compile Include="Types\Failed.cs" />
     <Compile Include="Infrastructure\FailedResult.cs" />
     <Compile Include="Abstract\Left.cs" />
-    <Compile Include="Infrastructure\Moved.cs" />
-    <Compile Include="Infrastructure\NetworkError.cs" />
-    <Compile Include="Infrastructure\NotFound.cs" />
+    <Compile Include="Types\Moved.cs" />
+    <Compile Include="Infrastructure\MovedResult.cs" />
+    <Compile Include="Types\NetworkError.cs" />
+    <Compile Include="Infrastructure\NetworkErrorResult.cs" />
+    <Compile Include="Types\NotFound.cs" />
+    <Compile Include="Infrastructure\NotFoundResult.cs" />
+    <Compile Include="Infrastructure\TimeoutResult.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Infrastructure\Resource.cs" />
+    <Compile Include="Types\Resource.cs" />
     <Compile Include="Abstract\Right.cs" />
-    <Compile Include="Infrastructure\Timeout.cs" />
+    <Compile Include="Types\Timeout.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,4 +1,4 @@
-﻿namespace Demo.Infratructure
+﻿namespace Demo.Types
 {
     class Resource
     {

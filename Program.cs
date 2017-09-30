@@ -7,13 +7,13 @@ namespace Demo
 {
     class Program
     {
-        static Abstract.Either<Failed, Resource> Fetch(Uri address)
+        static Abstract.Either<Types.Failed, Types.Resource> Fetch(Uri address)
         {
             var request = WebRequest.Create(address);
 
             try
             {
-                HttpWebResponse response = (HttpWebResponse) request.GetResponse();
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
                 if (response.StatusCode == HttpStatusCode.NotFound)
                     return new NotFoundResult();
 
@@ -34,11 +34,11 @@ namespace Demo
             }
             catch (WebException ex) when (ex.Status == WebExceptionStatus.Timeout)
             {
-                return new FailedResult(new Timeout());
+                return new TimeoutResult();
             }
             catch (WebException)
             {
-                return new FailedResult(new NetworkError());
+                return new NetworkErrorResult();
             }
         }
 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Demo.Infratructure
+namespace Demo.Types
 {
     class Moved : Failed
     {
@@ -9,9 +9,5 @@ namespace Demo.Infratructure
         {
             this.MovedTo = movedTo;
         }
-    }
-    class MovedResult:FailedResult
-    {
-        public MovedResult(Uri redirectUri):base(new Moved(redirectUri)) { }
     }
 }
